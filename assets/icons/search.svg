@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.5" height="17.5" viewBox="0 0 17.5 17.5">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Mask" d="M16.334,17.5a1.159,1.159,0,0,1-.825-.341l-2.451-2.451a8.163,8.163,0,1,1,1.65-1.65l2.451,2.451a1.166,1.166,0,0,1-.824,1.991ZM8.167,2.334A5.833,5.833,0,1,0,14,8.167,5.84,5.84,0,0,0,8.167,2.334Z" transform="translate(0.25 0.25)" fill="#0d8e53"/>
+    </clipPath>
+  </defs>
+  <g id="_22_Icons_Filled_Star_Copy" data-name="22) Icons/Filled/Star Copy" transform="translate(-0.25 -0.25)">
+    <path id="Mask-2" data-name="Mask" d="M16.334,17.5a1.159,1.159,0,0,1-.825-.341l-2.451-2.451a8.163,8.163,0,1,1,1.65-1.65l2.451,2.451a1.166,1.166,0,0,1-.824,1.991ZM8.167,2.334A5.833,5.833,0,1,0,14,8.167,5.84,5.84,0,0,0,8.167,2.334Z" transform="translate(0.25 0.25)" fill="#0d8e53"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.5" height="17.5" viewBox="0 0 22.5 17.5">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="_Icon_Color" data-name="🎨 Icon Color" d="M1.25,17.5a1.25,1.25,0,1,1,0-2.5h20a1.25,1.25,0,1,1,0,2.5Zm0-7.5a1.25,1.25,0,1,1,0-2.5h20a1.25,1.25,0,0,1,0,2.5Zm0-7.5a1.25,1.25,0,0,1,0-2.5h20a1.25,1.25,0,0,1,0,2.5Z" transform="translate(0.75 0.25)" fill="#0d8e53"/>
+    </clipPath>
+  </defs>
+  <g id="_22_Icons_Filled_Star" data-name="22) Icons/Filled/Star" transform="translate(-0.75 -0.25)">
+    <path id="_Icon_Color-2" data-name="🎨 Icon Color" d="M1.09,17.5a1.261,1.261,0,0,1,0-2.5H18.531a1.261,1.261,0,0,1,0,2.5ZM.841,10C.376,10,0,9.44,0,8.75S.376,7.5.841,7.5H14.286c.464,0,.841.56.841,1.25S14.75,10,14.286,10Zm.41-7.5a1.25,1.25,0,0,1,0-2.5h20a1.25,1.25,0,0,1,0,2.5Z" transform="translate(0.75 0.25)" fill="#0d8e53"/>
+  </g>
+</svg>
