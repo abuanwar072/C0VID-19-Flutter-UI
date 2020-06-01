@@ -9,82 +9,86 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 40),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: kPrimaryColor.withOpacity(0.03),
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
-              ),
-            ),
-            child: Wrap(
-              runSpacing: 20,
-              spacing: 20,
-              children: <Widget>[
-                InfoCard(
-                  title: "Confirmed Cases",
-                  iconColor: Color(0xFFFF8C00),
-                  effectedNum: 1062,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "Total Deaths",
-                  iconColor: Color(0xFFFF2D55),
-                  effectedNum: 75,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "Total Recovered",
-                  iconColor: Color(0xFF50E3C2),
-                  effectedNum: 689,
-                  press: () {},
-                ),
-                InfoCard(
-                  title: "New Cases",
-                  iconColor: Color(0xFF5856D6),
-                  effectedNum: 75,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return DetailsScreen();
-                        },
-                      ),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: SingleChildScrollView(
+
+//wrap singlechildscrollview for correct displaying in small density devices
+      body: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: kPrimaryColor.withOpacity(0.03),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
+                ),
+              ),
+              child: Wrap(
+                runSpacing: 20,
+                spacing: 20,
                 children: <Widget>[
-                  Text(
-                    "Preventions",
-                    style: Theme.of(context)
-                        .textTheme
-                        .title
-                        .copyWith(fontWeight: FontWeight.bold),
+                  InfoCard(
+                    title: "Confirmed Cases",
+                    iconColor: Color(0xFFFF8C00),
+                    effectedNum: 1062,
+                    press: () {},
                   ),
-                  SizedBox(height: 20),
-                  buildPreventation(),
-                  SizedBox(height: 40),
-                  buildHelpCard(context)
+                  InfoCard(
+                    title: "Total Deaths",
+                    iconColor: Color(0xFFFF2D55),
+                    effectedNum: 75,
+                    press: () {},
+                  ),
+                  InfoCard(
+                    title: "Total Recovered",
+                    iconColor: Color(0xFF50E3C2),
+                    effectedNum: 689,
+                    press: () {},
+                  ),
+                  InfoCard(
+                    title: "New Cases",
+                    iconColor: Color(0xFF5856D6),
+                    effectedNum: 75,
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return DetailsScreen();
+                          },
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
-          )
-        ],
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      "Preventions",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 20),
+                    buildPreventation(),
+                    SizedBox(height: 40),
+                    buildHelpCard(context)
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -141,7 +145,7 @@ class HomeScreen extends StatelessWidget {
                     text: "Dial 999 for \nMedical Help!\n",
                     style: Theme.of(context)
                         .textTheme
-                        .title
+                        .headline6
                         .copyWith(color: Colors.white),
                   ),
                   TextSpan(
@@ -203,9 +207,10 @@ class PreventitonCard extends StatelessWidget {
         Text(
           title,
           style:
-              Theme.of(context).textTheme.body2.copyWith(color: kPrimaryColor),
+              Theme.of(context).textTheme.bodyText1.copyWith(color: kPrimaryColor),
         )
       ],
     );
   }
 }
+
