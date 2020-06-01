@@ -7,92 +7,95 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: buildDetailsAppBar(context),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 21),
-                    blurRadius: 53,
-                    color: Colors.black.withOpacity(0.05),
-                  ),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  buildTitleWithMoreIcon(),
-                  SizedBox(height: 15),
-                  buildCaseNumber(context),
-                  SizedBox(height: 15),
-                  Text(
-                    "From Health Center",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w200,
-                      color: kTextMediumColor,
-                      fontSize: 16,
+        child: SingleChildScrollView(
+                  child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(0, 21),
+                      blurRadius: 53,
+                      color: Colors.black.withOpacity(0.05),
                     ),
-                  ),
-                  SizedBox(height: 15),
-                  WeeklyChart(),
-                  SizedBox(height: 15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      buildInfoTextWithPercentage(
-                        percentage: "6.43",
-                        title: "From Last Week",
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    buildTitleWithMoreIcon(),
+                    SizedBox(height: 15),
+                    buildCaseNumber(context),
+                    SizedBox(height: 15),
+                    Text(
+                      "From Health Center",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        color: kTextMediumColor,
+                        fontSize: 16,
                       ),
-                      buildInfoTextWithPercentage(
-                        percentage: "9.43",
-                        title: "Recovery Rate",
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 21),
-                    blurRadius: 54,
-                    color: Colors.black.withOpacity(0.05),
-                  ),
-                ],
-              ),
-              child: Column(
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Global Map",
-                        style: TextStyle(
-                          fontSize: 15,
+                    ),
+                    SizedBox(height: 15),
+                    WeeklyChart(),
+                    SizedBox(height: 15),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        buildInfoTextWithPercentage(
+                          percentage: "6.43",
+                          title: "From Last Week",
                         ),
-                      ),
-                      SvgPicture.asset("assets/icons/more.svg")
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  SvgPicture.asset("assets/icons/map.svg"),
-                ],
+                        buildInfoTextWithPercentage(
+                          percentage: "9.43",
+                          title: "Recovery Rate",
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(0, 21),
+                      blurRadius: 54,
+                      color: Colors.black.withOpacity(0.05),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          "Global Map",
+                          style: TextStyle(
+                            fontSize: 15,
+                          ),
+                        ),
+                        SvgPicture.asset("assets/icons/more.svg")
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    SvgPicture.asset("assets/icons/map.svg"),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -128,7 +131,7 @@ class DetailsScreen extends StatelessWidget {
           "547 ",
           style: Theme.of(context)
               .textTheme
-              .display3
+              .headline2
               .copyWith(color: kPrimaryColor, height: 1.2),
         ),
         Text(
@@ -179,3 +182,4 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
+
